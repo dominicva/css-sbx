@@ -6,8 +6,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/8004cccadd.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <h1>hello world</h1>
+    <nav>
+      <ul>
+        <li>
+          <h1>
+            <a href="index.html">
+              <span class="fa-solid fa-meteor" aria-hidden="true"></span>
+              <span>Dom van Almsick</span></a
+            >
+          </h1>
+        </li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li>
+          <a href="#">
+            <span class="fa-brands fa-linkedin" aria-hidden="true"></span>
+            <span class="sr-only">LinkedIn</span></a
+          >
+        </li>
+        <li>
+          <a href="#">
+            <span class="fa-brands fa-github-square" aria-hidden="true"></span>
+            <span class="sr-only">GitHub</span></a
+          >
+        </li>
+        <li><a href="#" class="button">Resume</a></li>
+      </ul>
+    </nav>
+    <section id="intro">
+      <hgroup>
+        <p class="name">Hi, my name is <span>Dom van Almsick.</span></p>
+        <h2>I teach the web.</h2>
+      </hgroup>
+      <p>
+        I'm also an instructor specializing in web development and programming
+        fundamentals. Currently, I'm completing the
+        <a
+          href="https://brainstation.io/london/software-engineering-bootcamp"
+          target="_blank"
+          referrerpolicy="no-referrer"
+          >diploma in Software Engineering</a
+        >
+        at
+        <a
+          href="https://brainstation.io/"
+          target="_blank"
+          referrerpolicy="no-referrer"
+          >Brainstation</a
+        >, and hope to start the
+        <a
+          href="https://www.imperial.ac.uk/computing/prospective-students/courses/pg/msc-computing/"
+          target="_blank"
+          referrerpolicy="no-referrer"
+          >MSc Computing</a
+        >
+        at
+        <a
+          href="https://www.imperial.ac.uk/"
+          target="_blank"
+          referrerpolicy="no-referrer"
+          >Imperial College</a
+        >
+        in September 2023.
+      </p>
+    </section>
+    <section id="contact">
+      <h2>Contact me</h2>
+      <p>
+        I'm always interested in hearing about new teaching opportunities,
+        writing curricula, or instructional design work.
+      </p>
+      <a href="mailto:dominicvana@gmail.com">Email me</a>
+    </section>
+    <footer>
+      <h2>Dominic VA &middot; Developer</h2>
+      <ul>
+        <li>
+          <a href="#">
+            <span class="fa-brands fa-linkedin" aria-hidden="true"></span>
+            <span class="sr-only">LinkedIn</span></a
+          >
+        </li>
+        <li>
+          <a href="#">
+            <span class="fa-brands fa-github-square" aria-hidden="true"></span>
+            <span class="sr-only">GitHub</span></a
+          >
+        </li>
+        <li>
+          <a href="#">
+            <span class="fa-solid fa-envelope" aria-hidden="true"></span>
+            <span class="sr-only">Email</span></a
+          >
+        </li>
+      </ul>
+      <p id="copyright-text">
+        &copy; [year] Dom van Almsick. All rights reserved.
+      </p>
+    </footer>
+    <script>
+      const copyrightTextElement = document.getElementById("copyright-text");
+      const copyrightText = copyrightTextElement.innerText;
+      const currentYear = new Date().getFullYear();
+      copyrightTextElement.innerText = copyrightText.replace(
+        "[year]",
+        currentYear
+      );
+    </script>
   </body>
 </html>

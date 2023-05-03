@@ -1,5 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen+Mono&family=Oxygen:wght@400;700&display=swap");
+
+:root {
+  --black: #171321;
+  --dkblue: #0d314b;
+  --plum: #4b0d49;
+  --hotmag: #ff17e4;
+  --magenta: #e310cb;
+  --aqua: #86fbfb;
+  --white: #f7f8fa;
+  --font-size: 1.3rem;
+  --mono: "Oxygen mono", monospace;
+  --sans: Oxygen, sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+}
+
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--sans);
+  background-color: var(--black);
+  color: var(--white);
+  font-size: var(--font-size);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+a {
+  color: var(--magenta);
+}
+
+a:hover {
+  color: var(--hotmag);
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+/* navbar styles */
+nav {
+  font-family: var(--mono);
+  font-size: 80%;
+  padding: 1rem;
+}
+
+nav h1 a {
+  font-family: var(--sans);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  gap: 2rem;
+}
+
+.logo-icon {
+  font-size: 10%;
+}
+
+nav li:first-child {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+nav [class*="fa-"] {
+  font-size: 150%;
+  color: var(--aqua);
+}
+
+nav h1 [class*="fa-"] {
+  font-size: 100%;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  display: block;
+}
+
+nav a:hover,
+nav a [class*="fa-"]:hover {
+  color: var(--magenta);
+}
+
+.button {
+  padding: 0.5rem;
+  background-color: var(--magenta);
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: var(--hotmag);
+  color: var(--white);
+}
+
+/* intro styles */
+#intro {
+  padding-bottom: 10rem;
+}
+
+#intro p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+#intro .name {
+  font-family: var(--mono);
+}
+
+.name span {
+  font-family: var(--sans);
+  font-size: 4rem;
+  color: var(--aqua);
+  display: block;
+}
+
+#intro h2 {
+  font-size: 4rem;
+  font-weight: normal;
+}
+
+/* contact styles */
+#contact {
+  background-color: var(--plum);
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+#contact h2 {
+  margin-bottom: 1.5rem;
+  font-weight: normal;
+}
+
+#contact p {
+  max-width: 400px;
+  margin: auto;
+  margin-bottom: 2rem;
+  font-weight: normal;
+}
+
+/* footer styling */
+footer {
+  padding: 2rem;
+  width: 400px;
+  margin: auto;
+  text-align: center;
+}
+
+footer h2 {
+  font-size: 120%;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 2rem 0;
+}
+
+footer ul a {
+  font-size: 200%;
+}
+
+footer p {
+  font-size: 75%;
+}
+
+@media (min-width: 850px) {
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  nav li:first-child {
+    flex-basis: auto;
+    text-align: left;
+    /* taking space outside navbar into
+    first-child and rest of the navbar */
+    margin-right: auto;
+  }
 }
